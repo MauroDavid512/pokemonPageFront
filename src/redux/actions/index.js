@@ -38,7 +38,7 @@ export const setSelectO = (payload) => {
 
 export const getAllPokes = () => {
     return async function (dispatch) {
-        const pokes = await axios.get("http://localhost:3001/pokemons")
+        const pokes = await axios.get("/pokemons")
         const respuesta = pokes.data
         dispatch({ type: GET_ALL_POKES, payload: respuesta })
     };
@@ -46,7 +46,7 @@ export const getAllPokes = () => {
 
 export const onSearch = (name) => {
     return async function(dispatch) {
-        const poke = await axios.get(`http://localhost:3001/pokemons/?name=${name}`)
+        const poke = await axios.get(`/pokemons/?name=${name}`)
         const pokeData = poke.data
         dispatch({ type: SEARCH_FILTER, payload: pokeData})
     }
@@ -79,7 +79,7 @@ export const attackSort = (payload) => {
 
 export const filterSearch = () => {
     return async function (dispatch) {
-        const types = await axios.get("http://localhost:3001/pokemons/originals")
+        const types = await axios.get("/pokemons/originals")
         const respuesta = types.data
         dispatch({ type: SEARCH_FILTER, payload: respuesta })
     };
@@ -87,7 +87,7 @@ export const filterSearch = () => {
 
 export const filterOriginal = () => {
     return async function (dispatch) {
-        const types = await axios.get("http://localhost:3001/pokemons/originals")
+        const types = await axios.get("/pokemons/originals")
         const respuesta = types.data
         dispatch({ type: GET_ORIGINALS_POKES, payload: respuesta })
     };
@@ -95,7 +95,7 @@ export const filterOriginal = () => {
 
 export const filterCreated = () => {
     return async function (dispatch) {
-        const types = await axios.get("http://localhost:3001/pokemons/created")
+        const types = await axios.get("/pokemons/created")
         const respuesta = types.data
         dispatch({ type: GET_CREATED_POKES, payload: respuesta })
     };
@@ -103,7 +103,7 @@ export const filterCreated = () => {
 
 export const getAllTypes = () => {
     return async function (dispatch) {
-        const types = await axios.get("http://localhost:3001/types")
+        const types = await axios.get("/types")
         const respuesta = types.data
         dispatch({ type: GET_ALL_TYPES, payload: respuesta })
     };
@@ -111,7 +111,7 @@ export const getAllTypes = () => {
 
 export const getPokeDetail = (id) => {
     return async (dispatch) => {
-        const pokemon = await axios.get(`http://localhost:3001/pokemons/${id}`)
+        const pokemon = await axios.get(`/pokemons/${id}`)
         const respuesta = pokemon.data
         dispatch({ type: GET_POKE_DETAILS, payload: respuesta })
     };
@@ -119,7 +119,7 @@ export const getPokeDetail = (id) => {
 
 export const getOriginalsPokes = () => {
     return async function (dispatch) {
-        const pokes = await axios.get("http://localhost:3001/pokemons/originals")
+        const pokes = await axios.get("/pokemons/originals")
         const respuesta = pokes.data
         dispatch({ type: GET_ALL_POKES, payload: respuesta })
     };
@@ -127,7 +127,7 @@ export const getOriginalsPokes = () => {
 
 export const getCreatedPokes = () => {
     return async function (dispatch) {
-        const pokes = await axios.get("http://localhost:3001/pokemons/created")
+        const pokes = await axios.get("/pokemons/created")
         const respuesta = pokes.data
         dispatch({ type: GET_ALL_POKES, payload: respuesta })
     };
