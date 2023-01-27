@@ -308,7 +308,7 @@ const PokemonCreator = () => {
                 <br />
                 <button type="submit" onChange={e => handleChange(e)} className="create">CREAR</button>
             </form>
-            <NavLink to="/home"><button>Volver</button></NavLink>
+            <NavLink to="/home"><button className="btn">Volver</button></NavLink>
         </div>
     )
 }
