@@ -49,7 +49,7 @@ const PokemonCreator = () => {
             if (Object.values(erroresForm).length > 0 || errorimg) {
                 alert('Faltan datos o los has ingresado de forma erronea :( ')
             } else {
-                axios.post('http://localhost:3001/pokemonCreator', creacion);
+                axios.post('/pokemonCreator', creacion);
                 console.log('Creacion ' + img)
                 alert("Creaste un pokemon!");
                 setType1('normal')
