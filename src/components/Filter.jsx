@@ -70,11 +70,11 @@ const Filter = () => {
                 </select>
                 <p>Ordenar:</p>
                 Por nombre <br />
-                <button name="nameUp" value="up" onClick={e => handleNameSort(e)}>/\</button>
-                <button name="nameDown" value="down" onClick={e => handleNameSort(e)}>\/</button>
+                <button className="btn" name="nameUp" value="up" onClick={e => handleNameSort(e)}>/\</button>
+                <button className="btn" name="nameDown" value="down" onClick={e => handleNameSort(e)}>\/</button>
                 <br /> Por ataque<br/>
-                <button name="attackUp" value="upA" onClick={e => handleAttackSort(e)}>/\</button>
-                <button name="attackDown" value="downA" onClick={e => handleAttackSort(e)}>\/</button> <br />
+                <button className="btn" name="attackUp" value="upA" onClick={e => handleAttackSort(e)}>/\</button>
+                <button className="btn" name="attackDown" value="downA" onClick={e => handleAttackSort(e)}>\/</button> <br />
                 Ver: <br />
                 <select name="defaults" value={selectO} onChange={e => handleOriginFilter(e)} onKeyUp={e => handleOriginFilter(e)}>
                     <option value="all">Todos</option>
