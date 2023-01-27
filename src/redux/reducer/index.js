@@ -41,7 +41,7 @@ const rootReducer = (state = initialState, action) => {
             if (typeFiltered.length === 0) {
                 aux = `Lo siento, no tenemos guardados pokemons de tipo ${action.payload}`
             } else {
-                aux = action.payload === 'all' ? "TODOS LOS POKEMONS!" : `POKEMONS TIPO: ${action.payload.toUpperCase()}`
+                aux = action.payload === 'all' ? "TODOS LOS POKEMONS" : `POKEMONS TIPO: ${action.payload.toUpperCase()}`
             }
             return {
                 ...state,
