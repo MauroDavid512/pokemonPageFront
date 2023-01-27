@@ -19,7 +19,7 @@
 }
 
 .image3{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    max-width: 700px;
+    max-height: 500px;
+    
 }

@@ -8,7 +8,7 @@ export const Autor = () => {
         <div>
             <h1>Hola!</h1>
             <br />
-            <img className="image3" src="https://media-exp1.licdn.com/dms/image/D4D03AQFetFkVFk6KvQ/profile-displayphoto-shrink_800_800/0/1665445837086?e=1671667200&v=beta&t=lfnDSKHkrl3NVWrmWef-w0Bt6t6faWZ_ug_iRCwS-no" alt="" />
+            <img className="image3" src="https://res.cloudinary.com/maurodavid/image/upload/v1665554699/Redes%20personales/Sin_t%C3%ADtulo-1_rtmwbi.png" alt="" />
             <h3>Soy Mauro David</h3>
             <h3>Soy Desarrollador Web FullStack</h3>
             <h3>Esta página fue realizada utilizando las tecnologías:</h3>
