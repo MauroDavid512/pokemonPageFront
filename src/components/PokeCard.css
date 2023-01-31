@@ -1,13 +1,4 @@
-.card{
-    background-color: rgba(255, 255, 255, 0.623);
-    margin: 10px;
-    width: 12rem;
-    height: 15rem;
-    border-radius: 10%;
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.5px black;
-    font-family: Impact;
-}
+
 
 .image{
     padding: 10px;
@@ -16,6 +7,48 @@
     height: 120px;
 }
 
+.card {
+    background-color: rgba(255, 255, 255, 0.623);
+    margin: 10px;
+    width: 12rem;
+    height: 15rem;
+    border-radius: 10%;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.5px black;
+    font-family: Impact;
+    position: relative;
+    display: inline-block;
+    transition: all .2s;
+    border: none;
+   }
+   
+   .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .card:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .card::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+
+
+
 .text{
     text-decoration: none;
 }
+
