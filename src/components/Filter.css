@@ -1,10 +1,4 @@
-.create{
-    background-color: brown;
-    border-radius: 3px;
-    border-color: rgb(133, 34, 34);
-    color:white;
-    cursor: pointer
-}
+
 .filterContainer{
     position: relative;
 }
@@ -13,3 +7,65 @@
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 0.5px black;
 }
+
+.padding{
+    padding: 2%;
+}
+
+.arrowdown{
+    padding: 5%;
+    margin: 5px;
+}
+
+.arrowup{
+    padding: 5%;
+}
+
+.iconoarrowup{
+	position: relative;
+	height: 0px; width: 0px;
+	border: 5px solid;
+
+	border-color: 
+		rgb(255, 255, 255)
+		rgb(255, 255, 255)
+		transparent
+		transparent;
+	transform: rotate(-45deg); 
+}
+
+/* .iconoarrowup:before {
+	content: '';
+	position: absolute;
+	top: 0px; right: 0px;
+	display: block;
+	height: 5px; width: 7px;
+	background-color: rgb(255, 255, 255);
+	transform: 
+		rotate(-45deg) 
+		translate(2px, 1px);
+} */
+
+.iconoarrowdown{
+	position: relative;
+	height: 0px; width: 0px;
+	border: 5px solid;
+	border-color: 
+		rgb(255, 255, 255)
+		rgb(255, 255, 255)
+		transparent
+		transparent;
+	transform: rotate(135deg); 
+}
+
+/* .iconoarrowdown:before {
+	content: '';
+	position: absolute;
+	top: 0px; right: 0px;
+	display: block;
+	height: 5px; width: 7px;
+	background-color: rgb(255, 255, 255);
+	transform: 
+		rotate(135deg) 
+		translate(1px, 2px);
+} */

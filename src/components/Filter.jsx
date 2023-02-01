@@ -61,7 +61,9 @@ const Filter = () => {
     let types = useSelector((state) => state.types)
     return (
         <div className="filterContainer">
-            <button className="create" onClick={e => handleGetAll(e)}>Cargar pokemons nuevamente</button>
+            <button  onClick={e => handleGetAll(e)}>Cargar pokemons nuevamente</button>
+            <br />
+            <div class="padding"></div>
             <SearchBar/>
             <p>Filtrar por tipo: </p>
                 <select name="type" value={selectT} onChange={e => handleTypeFilter(e)}>
@@ -70,11 +72,11 @@ const Filter = () => {
                 </select>
                 <p>Ordenar:</p>
                 Por nombre <br />
-                <button className="btn" name="nameUp" value="up" onClick={e => handleNameSort(e)}>/\</button>
-                <button className="btn" name="nameDown" value="down" onClick={e => handleNameSort(e)}>\/</button>
+                <button class="arrowup" name="nameUp" value="up" onClick={e => handleNameSort(e)}><div class="iconoarrowup"></div></button>
+                <button className="arrowdown" name="nameDown" value="down" onClick={e => handleNameSort(e)}><div class="iconoarrowdown"></div></button>
                 <br /> Por ataque<br/>
-                <button className="btn" name="attackUp" value="upA" onClick={e => handleAttackSort(e)}>/\</button>
-                <button className="btn" name="attackDown" value="downA" onClick={e => handleAttackSort(e)}>\/</button> <br />
+                <button className="arrowup" name="attackUp" value="upA" onClick={e => handleAttackSort(e)}><div class="iconoarrowup"></div></button>
+                <button className="arrowdown" name="attackDown" value="downA" onClick={e => handleAttackSort(e)}><div class="iconoarrowdown"></div></button> <br />
                 Ver: <br />
                 <select name="defaults" value={selectO} onChange={e => handleOriginFilter(e)} onKeyUp={e => handleOriginFilter(e)}>
                     <option value="all">Todos</option>

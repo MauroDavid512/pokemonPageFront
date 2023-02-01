@@ -236,12 +236,14 @@ const PokemonCreator = () => {
                 {/*---------------------*/}
                 <br />
                 <label>Imagen: </label><br />
+                <div class="file-select" id="src-file2">
                 <input
                     id="inputFile"
                     type="file"
                     name="image"
                     onChange={(e) => handleimg(e)}
                 />
+                </div>
                 {loading === 2 ? (
                     <p>
                         Cargando imagen...
@@ -252,7 +254,7 @@ const PokemonCreator = () => {
                 {loading === 0 ? (
                     <div>
                         <br />
-                        <img src={img} alt="" />
+                        <img class="imagencarga" src={img} alt="" />
                         <br />
                     </div>
                 ) : (
@@ -306,9 +308,10 @@ const PokemonCreator = () => {
                 </select>
                 {/*---------------------*/}
                 <br />
+                <NavLink to="/home"><button className="btn">Volver</button></NavLink>
                 <button type="submit" onChange={e => handleChange(e)} className="create">CREAR</button>
+                
             </form>
-            <NavLink to="/home"><button className="btn">Volver</button></NavLink>
         </div>
     )
 }
