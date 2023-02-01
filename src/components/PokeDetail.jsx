@@ -3,6 +3,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import * as actions from "../redux/actions"
 import { NavLink } from 'react-router-dom';
+import loading from "../imgs/loading.gif"
 
 const PokeDetail = (props) => {
      let id = props.match.params.id
@@ -19,7 +20,7 @@ const PokeDetail = (props) => {
             <div>
             <h2>{pokemon.name}</h2>
             <div>
-            <img className="image2" src={pokemon.img} alt={pokemon.name} />
+            {Object.values(pokemon).length !== 0 ? <img className="image2" src={pokemon.img} alt={pokemon.name} />: <img className="image2" src={loading} alt="Cargando..." />}
             </div>
             </div>
             <div>

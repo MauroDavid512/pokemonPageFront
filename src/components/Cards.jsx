@@ -4,6 +4,7 @@ import PokeCard from "./PokeCard";
 import { connect, useDispatch, useSelector } from 'react-redux'
 import * as actions from "../redux/actions"
 import Paginado from "./Paginado.jsx";
+import loading from "../imgs/loading.gif"
 
 export const Cards = () => {
 
@@ -22,10 +23,16 @@ export const Cards = () => {
     dispatch(actions.changePage(pageNumber))
   }
   const sortS = useSelector((state) => state.ordenamiento)
+
+
+
+
   return (
     <div>
       <div className="order">
+        {allPokes.length === 0 ? <img class="image" src={loading} alt="Cargando..." />:false}
         {currentPokes?.map(p => <PokeCard key={p.id} id={p.id} name={p.name} img={p.img} typesString={p.typesString} types={p.types} />)}
+        
       </div>
       <div>
         <p>Página {page}</p>
