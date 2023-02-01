@@ -18,6 +18,7 @@ export default function SearchBar() {
       setPoke("")
     } else {
       e.preventDefault();
+      
       dispatch(actions.onSearch(e.target.value))
       dispatch(actions.setSelectO('all'))
       dispatch(actions.setSelectT('all'))
