@@ -1,7 +1,6 @@
 .contenedor{
     background-color: rgba(255, 255, 255, 0.233);
     display: flexbox;
-    max-width: 30rem;
     border-radius: 5%;
     padding:3%;
     align-items: center;
@@ -9,10 +8,16 @@
     justify-content: center;
     font-family: Impact;
     margin-top: 1%;
+    border-radius: 21px;
+    font-size: 120%;
+background: linear-gradient(225deg, #ffffff56, #69696938);
+box-shadow:  -9px 9px 18px #00000052,
+             9px -9px 18px #ffffff00;
 }
 .titulo{
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 0.5px black;
+    text-decoration: none;
 }
 
 .file-select {

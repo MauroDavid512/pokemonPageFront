@@ -232,7 +232,7 @@ const PokemonCreator = () => {
             </div>
             <form onSubmit={e => handleSubmit(e)}>
                 <label>Nombre: </label><br />
-                <input name="name" value={creacion.name} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
+                <input class="input" name="name" value={creacion.name} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
                 {erroresForm.name ? <div><small>{erroresForm.name}</small><br /></div> : false}
                 {/*---------------------*/}
                 <br />
@@ -272,41 +272,42 @@ const PokemonCreator = () => {
                 <h3 className="titulo">Estadisticas:</h3>
                 {erroresForm.suma ? <div><small>{erroresForm.suma}</small><br /></div> : false}
                 <label>Vida: </label><br />
-                <input name="hp" value={creacion.hp} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
+                <input class="input" name="hp" value={creacion.hp} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
                 {erroresForm.hp ? <div><small>{erroresForm.hp}</small><br /></div> : false}
                 {/*---------------------*/}
                 <br />
                 <label>Ataque: </label><br />
-                <input name="attack" value={creacion.attack} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
+                <input class="input" name="attack" value={creacion.attack} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
                 {erroresForm.attack ? <div><small>{erroresForm.attack}</small><br /></div> : false}
                 {/*---------------------*/}
                 <br />
                 <label>Defensa: </label><br />
-                <input name="defense" value={creacion.defense} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
+                <input class="input" name="defense" value={creacion.defense} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
                 {erroresForm.defense ? <div><small>{erroresForm.defense}</small><br /></div> : false}
                 {/*---------------------*/}
                 <br />
                 <label>Velocidad: </label><br />
-                <input name="speed" value={creacion.speed} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
+                <input class="input" name="speed" value={creacion.speed} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
                 {erroresForm.speed ? <div><small>{erroresForm.speed}</small><br /></div> : false}
                 {/*---------------------*/}
                 <br />
                 <label>Altura</label><br />
-                <input name="height" value={creacion.height} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
+                <input class="input" name="height" value={creacion.height} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
                 {erroresForm.height ? <div><small>{erroresForm.height}</small><br /></div> : false}
                 {/*---------------------*/}
                 <br />
                 <label>Peso</label><br />
-                <input name="weight" value={creacion.weight} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
+                <input class="input" name="weight" value={creacion.weight} onChange={e => handleChange(e)} onKeyUp={e => handleErrors(e)} ></input>
                 {erroresForm.weight ? <div><small>{erroresForm.weight}</small><br /></div> : false}
                 {/*---------------------*/}
                 <hr />
                 <h3 className="titulo">Tipo</h3>
                 <label>Puedes elegir 1 o 2 tipos</label><br />
-                <select name="type1" value={type1} onChange={e => handleTypes(e)} onClick={e => handleTypes(e)}>
+                <select class="select" name="type1" value={type1} onChange={e => handleTypes(e)} onClick={e => handleTypes(e)}>
                     {types.map(e => <option value={e.name}>{e.name}</option>)}
                 </select>
-                <select name="type2" value={type2} onChange={e => handleTypes(e)} onClick={e => handleTypes(e)}>
+                <div class="padding"></div>
+                <select class="select" name="type2" value={type2} onChange={e => handleTypes(e)} onClick={e => handleTypes(e)}>
                     <option value="undefined">--</option>
                     {types.map(e => <option value={e.name}>{e.name}</option>)}
                 </select>

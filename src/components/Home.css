@@ -16,11 +16,14 @@
     background-color: rgba(255, 255, 255, 0.402);
     justify-content: start;
     margin: 10px;
+    padding-top: 7px;
     width: 12rem;
-    height: 28rem;
-    border-radius: 5%;
+    padding-bottom: 13px;
     font-family: Impact;
-
+    border-radius: 15px;
+    background: linear-gradient(225deg, #ffffff56, #69696938);
+    box-shadow:  -9px 9px 18px #00000052,
+             9px -9px 18px #ffffff00;
 }
 
 .cardContainer{

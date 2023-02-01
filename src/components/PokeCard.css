@@ -12,7 +12,6 @@
     margin: 10px;
     width: 12rem;
     height: 15rem;
-    border-radius: 10%;
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 0.5px black;
     font-family: Impact;
@@ -20,7 +19,11 @@
     display: inline-block;
     transition: all .2s;
     border: none;
-    
+    border-radius: 15px;
+    text-decoration: none;
+background: linear-gradient(225deg, #ffffff56, #69696938);
+box-shadow:  -9px 9px 18px #00000052,
+             9px -9px 18px #ffffff00;
     
    }
    
@@ -47,7 +50,9 @@
     transition: all .4s;
    }
    
-
+.link{
+    text-decoration: none;
+}
 
 
 .text{

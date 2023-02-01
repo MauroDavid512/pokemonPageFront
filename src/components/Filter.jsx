@@ -62,7 +62,7 @@ const Filter = () => {
             <div class="padding"></div>
             <SearchBar/>
             <p>Filtrar por tipo: </p>
-                <select name="type" value={selectT} onChange={e => handleTypeFilter(e)}>
+                <select name="type" value={selectT} class="select" onChange={e => handleTypeFilter(e)}>
                     <option value="all">Todos</option>
                     {types.map(e=> <option value={e.name}>{e.name}</option>)}
                 </select>
@@ -73,8 +73,10 @@ const Filter = () => {
                 <br />Por ataque<br/>
                 <button class="arrowup" onClick={e => handleAttackSort("upA")}><div class="iconoarrowup"></div></button>
                 <button class="arrowdown" onClick={e => handleAttackSort("downA")}><div class="iconoarrowdown"></div></button> <br />
+                <div class="padding"></div>
                 Ver: <br />
-                <select name="defaults" value={selectO} onChange={e => handleOriginFilter(e)} onKeyUp={e => handleOriginFilter(e)}>
+                <div class="padding"></div>
+                <select name="defaults" value={selectO} onChange={e => handleOriginFilter(e)} class="select" onKeyUp={e => handleOriginFilter(e)}>
                     <option value="all">Todos</option>
                     <option value="Api">Originales</option>
                     <option value="Db">Creados</option>

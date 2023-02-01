@@ -5,10 +5,14 @@ import { Link } from "react-router-dom"
 
 export const Autor = () => {
     return (
-        <div>
+        <div class="superconteiner">
+        <div class="contenedor">
+            <div class="titulo">
             <h1>Hola!</h1>
             <br />
+            <div class="superconteiner">
             <img className="image3" src="https://res.cloudinary.com/maurodavid/image/upload/v1665554699/Redes%20personales/Sin_t%C3%ADtulo-1_rtmwbi.png" alt="" />
+            </div>
             <h3>Soy Mauro David</h3>
             <h3>Soy Desarrollador Web FullStack</h3>
             <h3>Esta página fue realizada utilizando las tecnologías:</h3>
@@ -32,6 +36,8 @@ export const Autor = () => {
 
 
             <Link to="/home"><button className="btn">Volver</button></Link>
+            </div>
+        </div>
         </div>
     )
 }

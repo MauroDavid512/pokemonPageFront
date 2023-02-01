@@ -7,18 +7,20 @@ import pokebola from '../imgs/pokebola.png'
 const PokeCard = (props) => {
     
     return (
+        <NavLink class="link" to={`/pokeDetail/${props.id}`}>
         <div className="card">
-            <NavLink to={`/pokeDetail/${props.id}`}>
+            
                 <img className="image" src={props.img? props.img : pokebola} alt={props.name}/>
-            </NavLink>
+            
                 <hr />
                 <h3>{props.name}</h3>
              
                 <p><b>Tipo: {props.typesString}</b>
                 </p>
-
+                
             
         </div>
+        </NavLink>
     )
 }
 

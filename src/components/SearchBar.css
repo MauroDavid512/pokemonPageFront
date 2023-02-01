@@ -1,0 +1,21 @@
+.input {
+
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 22.5px;
+    transition: .4s;
+  }
+  
+  .input:hover {
+    box-shadow: 0 0 0 .15vw rgba(255, 255, 255, 0.308);
+  }
+  
+  .input:focus {
+    background-color: white;
+    box-shadow: 0 0 0 .2vw rgba(0, 0, 0, 0.308);
+  }

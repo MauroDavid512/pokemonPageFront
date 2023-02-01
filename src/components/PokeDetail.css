@@ -4,11 +4,15 @@
     width: 15rem;
     height: 100%;
     padding: 0.01% 0%  1% 0%;
-    border-radius: 10%;
     font-family: Impact;
     justify-content: center;
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.5px black;
+    -webkit-text-fill-color: rgb(255, 255, 255); 
+    -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+    border-radius: 21px;
+    font-size: 120%;
+background: linear-gradient(225deg, #ffffff56, #69696938);
+box-shadow:  -9px 9px 18px #00000052,
+             9px -9px 18px #00000000;
     
 }
 
@@ -27,5 +31,6 @@
 
 .superconteiner{
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+
 }

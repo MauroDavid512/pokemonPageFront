@@ -16,6 +16,7 @@ function App() {
       <Route path={"/pokeDetail/:id"} component={PokeDetail}/>
       <Route path="/pokemonCreator" component={PokemonCreator}/>
       <Route path="/autor" component={Autor}/>
+      <div class="padding"></div>
     </div>
   );
 }

@@ -32,12 +32,16 @@ export default function SearchBar() {
 
   return (
     <form>
+      <div class="containerInput">
       <input
         type="text"
-        placeholder="Buscar Pokemón..."
+        placeholder="Buscar Pokemón"
+        class="input"
         value={poke}
         onChange={e => handleInput(e)}
       />
+      </div>
+      <br />
       <button className="create" onClick={e => handleSubmit(e)} value={poke}>Buscar</button>
     </form>
   )
