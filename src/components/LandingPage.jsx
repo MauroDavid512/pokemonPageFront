@@ -10,7 +10,7 @@ const LandingPage = () => {
             <div>
                 <img className="landingLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="" />
             <h1>Conoce mejor a los pokemon!</h1>
-            <Link to="/home"><button class="btn-shine">Entrar</button></Link>
+            <Link to="/home"><button><div class="tamanoGrande">Entrar</div></button></Link>
             </div>
         </div>
     )
