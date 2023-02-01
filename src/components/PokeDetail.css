@@ -1,7 +1,8 @@
 .container2{
-    background-color: rgba(255, 255, 255, 0.255);
+    background-color: rgba(255, 255, 255, 0.192);
     margin: 10px;
     width: 15rem;
+    height: 100%;
     padding: 0.01% 0%  1% 0%;
     border-radius: 10%;
     font-family: Impact;
@@ -22,4 +23,9 @@
     max-width: 700px;
     max-height: 500px;
     
+}
+
+.superconteiner{
+    display: flex;
+    justify-content: center;    
 }

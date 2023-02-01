@@ -225,6 +225,7 @@ const PokemonCreator = () => {
 
 
     return (
+        <div class="superconteiner">
         <div className="contenedor">
             <div>
                 <h1 className="titulo">¡CREA TU PROPIO POKEMON!</h1>
@@ -236,13 +237,16 @@ const PokemonCreator = () => {
                 {/*---------------------*/}
                 <br />
                 <label>Imagen: </label><br />
+                <div class="superconteiner">
                 <div class="file-select" id="src-file2">
+                    
                 <input
                     id="inputFile"
                     type="file"
                     name="image"
                     onChange={(e) => handleimg(e)}
                 />
+                </div>
                 </div>
                 {loading === 2 ? (
                     <p>
@@ -312,6 +316,7 @@ const PokemonCreator = () => {
                 <button type="submit" onChange={e => handleChange(e)} className="create">CREAR</button>
                 
             </form>
+        </div>
         </div>
     )
 }

@@ -14,6 +14,7 @@ const PokeDetail = (props) => {
      let pokemon = useSelector((state) => state.pokemonDetail)
 
     return (
+        <div class="superconteiner">
         <div className="container2">
             <div>
             <h2>{pokemon.name}</h2>
@@ -37,23 +38,8 @@ const PokeDetail = (props) => {
             <NavLink to="/home"><button className='create'>Volver</button></NavLink>
            
         </div>
+        </div>
 
-
-
-
-
-        // <div>
-        //     <h2>{mayus(pokemon.name)}</h2>
-        //     <img src={pokemon.img} alt={pokemon.name} />
-        //     <h4>{pokemon.id}</h4>
-        //     <h4>Vida: {pokemon.hp}</h4>
-        //     <h4>Ataque: {pokemon.attack}</h4>
-        //     <h4>Defensa: {pokemon.defense}</h4>
-        //     <h4>Velocidad: {pokemon.speed}</h4>
-        //     <h4>Altura: {pokemon.height}</h4>
-        //     <h4>Peso: {pokemon.weight}</h4>
-        //     <h4>Tipo: {msg}</h4>
-        // </div>
     )
 };
 
