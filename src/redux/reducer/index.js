@@ -105,7 +105,6 @@ const rootReducer = (state = initialState, action) => {
                     return 0;
                 }
             })
-            console.log(orden2)
         return {
             ...state,
             pokemons: orden2,

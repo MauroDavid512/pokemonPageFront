@@ -61,6 +61,7 @@ export const filterType = (payload) => {
 
 export const nameSort = (payload) => {
     return async function (dispatch) {
+        console.log("esta es la accion" + payload)
         dispatch({
             type: NAME_SORT,
             payload: payload

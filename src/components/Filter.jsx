@@ -16,8 +16,6 @@ const Filter = () => {
     let selectO = useSelector(state => state.selectO)
 
 
-    const [bool,setBool] = useState(true)
-
     const handleGetAll = (e) => {
         dispatch(actions.getAllPokes())
         dispatch(actions.setSelectT('all'))
@@ -30,17 +28,15 @@ const Filter = () => {
         dispatch(actions.setSelectO('all'))
     }
 
-    const handleAttackSort = (e) => {
-        bool===true? setBool(false) : setBool(true)
-        console.log(bool)
-        dispatch(actions.attackSort(e.target.value))
+    const handleAttackSort = (dir) => {
+        dispatch(actions.attackSort(dir))
     }
 
-    const handleNameSort = (e) => {
-        bool===true? setBool(false) : setBool(true)
-        console.log(bool)
-        dispatch(actions.nameSort(e.target.value))
+    const handleNameSort = (dir) => {
+        dispatch(actions.nameSort(dir))
     }
+
+  
 
     const handleOriginFilter = (e) => {
         if(e.target.value==='Api'){
@@ -72,16 +68,16 @@ const Filter = () => {
                 </select>
                 <p>Ordenar:</p>
                 Por nombre <br />
-                <button class="arrowup" name="nameUp" value="up" onClick={e => handleNameSort(e)}><div class="iconoarrowup"></div></button>
-                <button className="arrowdown" name="nameDown" value="down" onClick={e => handleNameSort(e)}><div class="iconoarrowdown"></div></button>
-                <br /> Por ataque<br/>
-                <button className="arrowup" name="attackUp" value="upA" onClick={e => handleAttackSort(e)}><div class="iconoarrowup"></div></button>
-                <button className="arrowdown" name="attackDown" value="downA" onClick={e => handleAttackSort(e)}><div class="iconoarrowdown"></div></button> <br />
+                <button class="arrowup" onClick={e => handleNameSort("up")}><div  class="iconoarrowup"></div></button>
+                <button class="arrowdown"  onClick={e => handleNameSort("down")}><div class="iconoarrowdown"></div></button>
+                <br />Por ataque<br/>
+                <button class="arrowup" onClick={e => handleAttackSort("upA")}><div class="iconoarrowup"></div></button>
+                <button class="arrowdown" onClick={e => handleAttackSort("downA")}><div class="iconoarrowdown"></div></button> <br />
                 Ver: <br />
                 <select name="defaults" value={selectO} onChange={e => handleOriginFilter(e)} onKeyUp={e => handleOriginFilter(e)}>
                     <option value="all">Todos</option>
                     <option value="Api">Originales</option>
-                    <option value="Db">Creados</option>|
+                    <option value="Db">Creados</option>
                 </select><hr />
                 <NavLink to="/pokemonCreator"><button className="btn">¡Crea tu propio<br/>POKEMON!</button></NavLink>
         </div>
