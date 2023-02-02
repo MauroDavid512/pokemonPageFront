@@ -26,13 +26,13 @@ export const Autor = () => {
                 <h3>HTML</h3>
                 <h3>CSS</h3>
 
-            <h3>Si deseás ver el codigo te dejo el link al repositorio aquí: <a href="https://github.com/MauroDavid512/pokemonPage"><br /><button><div class="tamanoGrande"> Repo </div></button></a></h3>
+            <h3>Si deseás ver el codigo te dejo el link al repositorio aquí: <a target="en _blank" href="https://github.com/MauroDavid512/pokemonPage"><br /><button><div class="tamanoGrande"> Repo </div></button></a></h3>
 
             <h3> Si tenés cualquier consulta te invito a contactarme! </h3>
 
-            <a href="https://www.linkedin.com/in/mauro-david-89432b193/"><img class="image" src={LogoLink} alt="Linkedin" /></a>
+            <a target="en _blank" href="https://www.linkedin.com/in/mauro-david-89432b193/"><img class="image" src={LogoLink} alt="Linkedin" /></a>
 
-            <a href="https://github.com/MauroDavid512"><img class="image" src={LogoGitHub} alt="GitHub" /></a>
+            <a target="en _blank" href="https://github.com/MauroDavid512"><img class="image" src={LogoGitHub} alt="GitHub" /></a>
 
 
             <br />
