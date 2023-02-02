@@ -14,7 +14,6 @@ export default function SearchBar() {
       //traba la funcion
     }else if(!verificador){
       e.preventDefault();
-      //alert('No existe este pokemon o no lo tenemos cargado en nuestra base de datos :( ')
       dispatch(actions.notFound())
       setPoke("")
     } else {

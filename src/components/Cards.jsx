@@ -35,7 +35,7 @@ export const Cards = () => {
       <div className="order">
         {allPokes.length === 0 && !notFound? <img class="image" src={loading} alt="Cargando..." />:false}
         
-        {allPokes.length === 0 && notFound? <img class="image" src={notfound} alt="Cargando..." />:false}
+        {allPokes.length === 0 && notFound? <img class="image" src={notfound} alt="NotFound" />:false}
 
         {currentPokes?.map(p => <PokeCard key={p.id} id={p.id} name={p.name} img={p.img} typesString={p.typesString} types={p.types} />)}
         
