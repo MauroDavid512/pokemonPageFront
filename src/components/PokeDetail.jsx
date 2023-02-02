@@ -21,7 +21,7 @@ const PokeDetail = (props) => {
             <div>
             <h2>{pokemon.name}</h2>
             <div>
-            {Object.values(pokemon).length !== 0 ? <img className="image" src={pokemon.img? pokemon.img : pokebola} alt={pokemon.name}/>: <img className="image2" src={loading} alt="Cargando..." />}
+            {Object.values(pokemon).length !== 0 ? <img className="image2" src={pokemon.img? pokemon.img : pokebola} alt={pokemon.name}/>: <img className="image2" src={loading} alt="Cargando..." />}
             </div>
             </div>
             <div>
