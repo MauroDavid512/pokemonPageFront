@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import * as actions from '../redux/actions'
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import loadingg from "../imgs/loading.gif"
 
 // import { mayus } from "../../../api/src/routes/utils";
 
@@ -250,7 +251,7 @@ const PokemonCreator = () => {
                 </div>
                 {loading === 2 ? (
                     <p>
-                        Cargando imagen...
+                        <img class="imagencarga" src={loadingg} alt="" />
                     </p>
                 ) : (
                     false
