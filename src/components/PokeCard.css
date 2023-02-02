@@ -1,17 +1,30 @@
 
-
 .image{
     padding: 10px;
     opacity: 1;
     width: 120px;
     height: 120px;
+    transition: 0.2s;
+}
+
+.image4{
+    position: relative;
+    padding: 10px;
+    opacity: 1;
+    width: 120px;
+    height: 120px;
+    transition: 0.5s;
+}
+
+.image4:hover{
+    transform: rotate(-5deg);
+    transition: 0.5s;
 }
 
 .card {
     background-color: rgba(255, 255, 255, 0.466);
     margin: 10px;
     width: 12rem;
-    height: 15rem;
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 0.5px black;
     font-family: Impact;
@@ -59,3 +72,9 @@ box-shadow:  -9px 9px 18px #00000052,
     text-decoration: none;
 }
 
+.contenedorRedes{
+    display: flex;
+    justify-content: space-around;
+    padding: 0% 20% 0% 20%;
+
+}

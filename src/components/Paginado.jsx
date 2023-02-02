@@ -22,13 +22,13 @@ const Paginado = ({ pokesPerPage, allPokes, paginado }) => {
 
     return (
         <div className="paginContainer">
-            {(actualPage -1) > 0 ? <button className="btn" value={actualPage -1} onClick={e => handleChangePage(e)}>{'<'}</button>:null}
+            {(actualPage -1) > 0 ? <button className="btn" value={actualPage -1} onClick={e => handleChangePage(e)}> <div class="iconoarrowleft"></div> </button>:null}
             {pages
                 && pages.length > 1
                 && pages.map(num => (
                     <button className="btn" value={num}   onClick={(e) => {handleChangePage(e)}}>{num}</button>
                 ))}
-                {(actualPage +1) <= pages.length ? <button className="btn" value={actualPage +1} onClick={e => handleChangePage(e)}>{'>'}</button>:null}
+                {(actualPage +1) <= pages.length ? <button className="btn" value={actualPage +1} onClick={e => handleChangePage(e)}><div class="iconoarrowright"></div></button>:null}
         </div>
     )
 }
