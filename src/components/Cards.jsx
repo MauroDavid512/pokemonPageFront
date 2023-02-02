@@ -5,6 +5,7 @@ import { connect, useDispatch, useSelector } from 'react-redux'
 import * as actions from "../redux/actions"
 import Paginado from "./Paginado.jsx";
 import loading from "../imgs/loading.gif"
+import notfound from "../imgs/notfound.gif"
 
 export const Cards = () => {
 
@@ -12,6 +13,8 @@ export const Cards = () => {
   React.useEffect(() => {
     dispatch(actions.getAllPokes());
   }, [dispatch])
+
+  const notFound = useSelector((state) => state.notFound)
 
   const page = useSelector((state) => state.page)
   const allPokes = useSelector((state) => state.pokemons);
@@ -30,7 +33,10 @@ export const Cards = () => {
   return (
     <div>
       <div className="order">
-        {allPokes.length === 0 ? <img class="image" src={loading} alt="Cargando..." />:false}
+        {allPokes.length === 0 && !notFound? <img class="image" src={loading} alt="Cargando..." />:false}
+        
+        {allPokes.length === 0 && notFound? <img class="image" src={notfound} alt="Cargando..." />:false}
+
         {currentPokes?.map(p => <PokeCard key={p.id} id={p.id} name={p.name} img={p.img} typesString={p.typesString} types={p.types} />)}
         
       </div>

@@ -15,6 +15,7 @@ export const GET_GRASS = "GET_GRASS";
 export const SET_TYPE = 'SET_TYPE';
 export const SET_ORIGIN = "SET_ORIGIN";
 export const SET_FILTERS = "SET_FILTERS";
+export const NOT_FOUND = "NOT_FOUND"
 
 
 
@@ -51,6 +52,12 @@ export const onSearch = (name) => {
         dispatch({ type: SEARCH_FILTER, payload: pokeData})
     }
 } 
+
+export const notFound = () => {
+    return async function(dispatch){
+        dispatch({type: NOT_FOUND})
+    }
+}
 
 export const filterType = (payload) => {
     return {

@@ -10,7 +10,8 @@ import {
     SEARCH_FILTER,
     PAGINA,
     SET_ORIGIN,
-    SET_TYPE
+    SET_TYPE,
+    NOT_FOUND,
 } from '../actions'
 
 const initialState = {
@@ -22,32 +23,47 @@ const initialState = {
     ordenamiento: "indefinido",
     page: 1,
     selectT: "all",
-    selectO: 'all'
+    selectO: 'all',
+    notFound: false
 }
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_ALL_POKES: return {
-            ...state, pokemons: action.payload, allPokemons: action.payload, title: "TODOS LOS POKEMONS!", pokemonDetail: {}, ordenamiento: 'indefinido', page :1
+            ...state, pokemons: action.payload, allPokemons: action.payload, title: "TODOS LOS POKEMONS!", pokemonDetail: {}, ordenamiento: 'indefinido', page :1, notFound:false
         }
         case SEARCH_FILTER:
             return {
-                ...state, pokemons: action.payload, title: "BUSQUEDA REALIZADA: " + action.payload[0].name, ordenamiento: "indefinido", page :1
+                ...state, pokemons: action.payload,
+                title: "BUSQUEDA REALIZADA: " + action.payload[0].name,
+                ordenamiento: "indefinido",
+                page :1
+            }
+        case NOT_FOUND:
+            return {
+                ...state,
+                title: "No existe ese pokemon o no esta en nuestra base de datos :(",
+                notFound: true,
+                pokemons:[]
             }
         case TYPE_FILTER:
             const pokemons = state.allPokemons
             const typeFiltered = action.payload === 'all' ? pokemons : pokemons.filter(e => e.types[0].name === action.payload || (e.types[1] ? e.types[1].name === action.payload : null))
             let aux = ""
+            let bool = false
             if (typeFiltered.length === 0) {
-                aux = `Lo siento, no tenemos guardados pokemons de tipo ${action.payload}`
+                aux = `Lo sentimos, no tenemos guardados pokemons de tipo ${action.payload}`
+                bool = true
             } else {
                 aux = action.payload === 'all' ? "TODOS LOS POKEMONS!" : `POKEMONS TIPO: ${action.payload.toUpperCase()}`
+                bool = false
             }
             return {
                 ...state,
                 pokemons: typeFiltered,
                 title: aux,
-                page :1
+                page :1,
+                notFound: bool
             }
         case ATTACK_SORT:
             let palabra= ""
