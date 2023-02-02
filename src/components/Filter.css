@@ -82,6 +82,7 @@
     width: 150px;
     height: 22.5px;
     transition: .4s;
+	cursor:pointer;
   }
   
   .select:hover {
