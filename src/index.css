@@ -1,5 +1,4 @@
-body {
-  background-image: url('./imgs/wallpaper10.jpg');
+.body {
   background-attachment: fixed;
   background-size:cover;
   margin: 0;
@@ -10,11 +9,73 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flexbox;
   justify-content: center;
+  transition: 4s;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.background1{
+  background-image: url('./imgs/wallpaper1.jpg');
+
+}
+
+.background2{
+  background-image: url('./imgs/wallpaper2.jpg')
+}
+
+.background3{
+  background-image: url('./imgs/wallpaper3.jpg')
+}
+
+.background4{
+  background-image: url('./imgs/wallpaper4.jpg')
+}
+
+.background5{
+  background-image: url('./imgs/wallpaper5.jpg')
+}
+
+.background6{
+  background-image: url('./imgs/wallpaper6.jpg')
+}
+
+.background7{
+  background-image: url('./imgs/wallpaper7.jpg')
+}
+
+.background8{
+  background-image: url('./imgs/wallpaper8.jpg')
+}
+
+.background9{
+  background-image: url('./imgs/wallpaper9.jpg')
+}
+
+.background10{
+  background-image: url('./imgs/wallpaper10.jpg')
+}
+
+.background11{
+  background-image: url('./imgs/wallpaper11.jpg')
+}
+
+.background12{
+  background-image: url('./imgs/wallpaper12.jpg')
+}
+
+.background13{
+  background-image: url('./imgs/wallpaper13.jpg')
+}
+
+.background14{
+  background-image: url('./imgs/wallpaper14.jpg')
+}
+
+.background15{
+  background-image: url('./imgs/wallpaper15.jpg')
 }
 
 
