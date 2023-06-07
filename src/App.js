@@ -40,6 +40,7 @@ function App() {
       <Route path="/pokemonCreator" component={PokemonCreator} />
       <Route path="/autor" component={Autor} />
       <div class="padding"></div>
+      <img src="./imgs/wallpaper1" alt="" />
     </div>
   );
 }
